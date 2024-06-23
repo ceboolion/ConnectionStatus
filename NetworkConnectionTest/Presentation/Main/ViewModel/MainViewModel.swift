@@ -36,7 +36,7 @@ final class MainViewModel: MainViewModelProtocol {
         monitor.start(queue: queue)
     }
     
-    func setConnectionPathStatus(for status: NWPath) {
+    private func setConnectionPathStatus(for status: NWPath) {
         switch status.status {
         case .satisfied:
             connectionType = .connected
@@ -48,5 +48,4 @@ final class MainViewModel: MainViewModelProtocol {
             connectionType = .unknown
         }
     }
-    
 }

@@ -34,6 +34,7 @@ final class MainCoordinator: NSObject, Coordinator {
         setMainController(with: controller)
     }
     
+    //MARK: - PRIVATE METHODS
     private func showAlertFor(connectionStatus: ConnectionType) {
         let alertController = UIAlertController(title: "Connection unavailable", message: "Internet connection has been lost", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
@@ -49,5 +50,4 @@ final class MainCoordinator: NSObject, Coordinator {
     private func presentOnTopController(_ controller: UIViewController) {
         navigationController.topViewController?.present(controller, animated: true)
     }
-    
 }

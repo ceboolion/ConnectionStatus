@@ -16,11 +16,13 @@ class MainController: UIViewController {
     //MARK: - PRIVATE PROPERTIES
     private var connectionStatusView: ConnectionView!
 
+    //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
+    //MARK: - PRIVATE METHODS
     private func setupUI() {
         configureConnectionStatusView()
         configureConstraints()
@@ -41,8 +43,6 @@ class MainController: UIViewController {
             $0.edges.equalToSuperview()
         }
     }
-
-
 }
 
 //MARK: - EXTENSIONS

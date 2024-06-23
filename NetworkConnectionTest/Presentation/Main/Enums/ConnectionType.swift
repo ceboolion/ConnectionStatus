@@ -26,9 +26,9 @@ enum ConnectionType {
     var color: UIColor {
         switch self {
         case .connected:
-                .green
+                .systemGreen
         case .notConnected:
-                .red
+                .systemRed
         case .unknown:
                 .systemBackground
         }

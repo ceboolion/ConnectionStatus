@@ -37,6 +37,7 @@ class ConnectionView: UIView {
     
     private func configureTextLabel() {
         textLabel = UILabel()
+        textLabel.font = .systemFont(ofSize: 20)
     }
     
     private func configureConstraints() {
@@ -81,6 +82,4 @@ class ConnectionView: UIView {
             }
             .store(in: &viewModel.subscriptions)
     }
-    
-    
 }
