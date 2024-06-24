@@ -29,14 +29,14 @@ final class MainViewModel: MainViewModelProtocol {
         let monitor = NWPathMonitor()
         monitor.pathUpdateHandler = { [weak self] path in
             guard let self else { return }
-            self.setConnectionPathStatus(for: path)
+            self.setConnectionType(with: path)
         }
         
         let queue = DispatchQueue(label: "Connection")
         monitor.start(queue: queue)
     }
     
-    private func setConnectionPathStatus(for status: NWPath) {
+    private func setConnectionType(with status: NWPath) {
         switch status.status {
         case .satisfied:
             connectionType = .connected
